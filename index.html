@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-Letter Word and Company Name Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #6200ea;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            color: #6200ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>USERNAME GENERATER</h1>
+        <button onclick="generateWord()">Generate</button>
+        <p id="word"></p>
+    </div>
+
+    <script>
+        // Array with 4-letter words and notable company names
+        const words = [
+            'BARK', 'COLD', 'DART', 'EASY', 'FISH', 'GLOW', 'HOLD', 'JUMP',
+            'KITE', 'LAMP', 'MOON', 'NEST', 'OCEAN', 'PARK', 'QUAD', 'ROCK',
+            'SAND', 'TREE', 'URGE', 'VAST', 'WIND', 'YARN', 'ZEAL', 'WAVE',
+            'BOMB', 'CARD', 'DUST', 'ECHO', 'FUEL', 'GIFT', 'HAVE', 'ICON',
+            'JOUR', 'KISS', 'LOVE', 'MINT', 'NAME', 'OPEN', 'PINK', 'RICE',
+            'SHIP', 'TIDE', 'UNIT', 'VOTE', 'WINE', 'YOGA', 'ZONE', 'BIRD',
+            'COIN', 'DEAL', 'FIRM', 'GATE', 'HAT', 'IRON', 'JOKE', 'LIFT',
+            'MINE', 'NOTE', 'ORCH', 'QUIZ', 'RING', 'SHOT', 'TALK', 'VIEW',
+            'WASH', 'XMAS', 'ZERO', 'AHEAD', 'BOLT', 'CAVE', 'DAWN', 'EARN',
+            'FINE', 'GOLD', 'HARD', 'INCH', 'JUMP', 'KING', 'LIFE', 'MOOD',
+            'NICE', 'OPEN', 'PAIR', 'QUIT', 'RIDE', 'SLOW', 'TIME', 'USER',
+            'WILD', 'YARN', 'ZONE', 'EBAY', 'TEMU', 'HBO', 'COKE', 'DELL',
+            'FORD', 'NIKE', 'SONY', 'HP', 'PUMA', 'ZARA', 'LUNA', 'BCE',
+            'GMC', 'YUM', 'SAP', 'NFLX', 'HILTI', 'TNT', 'AAPL', 'GAP',
+            'BAM', 'OXY', 'RBC', 'DHL', 'TBS', 'PS4', 'AOL', 'ZINC',
+            'AWE', 'BID', 'DIA', 'FAST', 'LUV', 'REEL', 'NEST', 'GLAM',
+            'MOTO', 'MINT', 'BING', 'LIME', 'VISA'
+        ];
+
+        function generateWord() {
+            // Generate a random index
+            let randomIndex = Math.floor(Math.random() * words.length);
+            // Select the word at the random index
+            let word = words[randomIndex];
+            // Display the word
+            document.getElementById("word").innerText = word;
+        }
+    </script>
+</body>
+</html>
